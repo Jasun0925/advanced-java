@@ -1,3 +1,5 @@
+# 分布式系统中的 CAP 定理
+
 ## 分布式系统 CAP 定理 P 代表什么含义
 
 作者之前在看 CAP 定理时抱有很大的疑惑，CAP 定理的定义是指在分布式系统中三者只能满足其二，也就是存在分布式 CA 系统的。作者在网络上查阅了很多关于 CAP 文章，虽然这些文章对于 P 的解释五花八门，但总结下来这些观点大多都是指 P 是不可缺少的，也就是说在分布式系统只能是 AP 或者 CP，这种理论与我之前所认识的理论（存在分布式 CA 系统）是冲突的，所以才有了疑惑。
@@ -50,4 +52,4 @@ Zookeeper 在选举 leader 时会停止服务，只有成功选举 leader 成功
 和 Zookeeper 一样数据 CP
 
 Consul 注册时候只有过半的节点都写入成功才认为注册成功；leader 挂掉时，重新选举期间整个 Consul 不可用,保证了强一致性但牺牲了可用性  
-有很多 blog 说 Consul 属于 ap，官方已经确认他为 CP 机制 原文地址：https://www.consul.io/docs/intro/vs/serf
+有很多 blog 说 Consul 属于 ap，官方已经确认他为 CP 机制 原文地址：https://developer.hashicorp.com/consul/docs/concept/consensus

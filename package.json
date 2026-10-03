@@ -1,27 +1,32 @@
 {
-    "scripts": {
-        "start": "docsify serve --open",
-        "convert": "docsify-pdf-converter"
+  "name": "advanced-java",
+  "private": true,
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "vitepress-plugin-comment-with-giscus": "^1.1.15"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitepress": "2.0.0-alpha.20"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "8.3.0",
+      "esbuild": "0.28.2",
+      "postcss": "8.5.28",
+      "nanoid": "3.3.19"
     },
-    "name": "advanced-java",
-    "description": "互联网 Java 工程师进阶知识完全扫盲@doocs，https://github.com/doocs/advanced-java",
-    "version": "1.0.0",
-    "main": ".docsifytopdfrc.js",
-    "directories": {
-        "doc": "docs"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/doocs/advanced-java.git"
-    },
-    "author": "yanglbme",
-    "license": "CC-BY-SA-4.0",
-    "bugs": {
-        "url": "https://github.com/doocs/advanced-java/issues"
-    },
-    "homepage": "https://github.com/doocs/advanced-java#readme",
-    "devDependencies": {
-        "docsify-pdf-converter": "^2.0.7",
-        "prettier": "2.8.8"
-    }
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
 }
